@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>3D Viewer</title>
-  <style>body{margin:0;overflow:hidden}</style>
+<head><meta charset="utf-8"><title>Three.js Test</title>
+<style>body{margin:0;overflow:hidden}</style>
 </head>
 <body>
 
-  <!-- ① Three.js 本体 -->
-  <script src="https://unpkg.com/three@0.165.0/build/three.min.js"></script>
-
-  <!-- ② 追加ライブラリ（順番に注意）-->
-  <script src="https://unpkg.com/three@0.165.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://unpkg.com/three@0.165.0/examples/js/controls/OrbitControls.js"></script>
-
-  <!-- ③ あなたの app.js （最も後ろ！）-->
-  <script src="app.js"></script>
+<!-- Three.js 本体（最初） -->
+<script src="https://unpkg.com/three@0.165.0/build/three.min.js"></script>
+<!-- 追加ユーティリティ（例：GLTFLoader） -->
+<script src="https://unpkg.com/three@0.165.0/examples/js/loaders/GLTFLoader.js"></script>
+<!-- 最後に自作コード -->
+<script src="app.js"></script>
 
 </body>
 </html>
