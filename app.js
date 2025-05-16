@@ -12,6 +12,17 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(innerWidth, innerHeight);
 document.body.appendChild(renderer.domElement);
 
+/* ★★★ ここにライトを追加 ★★★ */
+
+// 1) 環境光（全体の底上げ）
+scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+
+// 2) 太陽光的な平行光
+const sun = new THREE.DirectionalLight(0xffffff, 3);
+sun.position.set(10, 20, 10);   // x, y, z
+sun.castShadow = true;          // 影を落としたい場合
+scene.add(sun);
+
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 
