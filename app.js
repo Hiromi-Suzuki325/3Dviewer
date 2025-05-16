@@ -1,4 +1,5 @@
 // app.js（3Dビューアのコード）
+console.log('THREE version:', THREE.REVISION);  // これが表示されればロード成功
 
 // シーンを作成
 const scene = new THREE.Scene();
